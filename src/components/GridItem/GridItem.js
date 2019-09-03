@@ -4,6 +4,7 @@ import {GridContext} from '../../context/Grid.context';
 export const GridItem = (props) => {
 
     const gridItemRef = useRef();
+    const gridItemWrapper = useRef();
     const gridContext = useContext(GridContext);
 
     const itemLoaded = () => {
@@ -14,21 +15,18 @@ export const GridItem = (props) => {
         const desiredHeight = (columnWidth * refHeight) / refWidth;
         const rowSpan = Math.ceil((desiredHeight + rowGap) / (rowHeight + rowGap))
         
-        gridItemRef.current.style.height = `${desiredHeight}px`;
-        gridItemRef.current.style.width = `${columnWidth}px`;
-        gridItemRef.current.style.gridRowEnd = `span ${rowSpan}`;
-        console.log("loaded", {desiredHeight, columnWidth,rowSpan });
+        gridItemWrapper.current.style.height = `${desiredHeight}px`;
+        gridItemWrapper.current.style.width = `${columnWidth}px`;
+        gridItemWrapper.current.style.gridRowEnd = `span ${rowSpan}`;
     }
 
     useEffect(itemLoaded, []);
 
     return (
-        <div 
-            ref={gridItemRef} 
-            style={{width: `${gridContext.columnWidth}px`, visibility: 'none'}}
-            onLoad={itemLoaded}
-        >
-            {props.children}
+        <div ref={gridItemWrapper}>
+            <div ref={gridItemRef} onLoad={itemLoaded}>
+                {props.children}
+            </div>
         </div>
     )
 }
