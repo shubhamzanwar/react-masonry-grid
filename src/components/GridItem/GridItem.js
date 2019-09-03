@@ -8,7 +8,7 @@ export const GridItem = (props) => {
 
     useEffect(itemLoaded, []);
 
-    itemLoaded = () => {
+    const itemLoaded = () => {
         const refHeight = gridItemRef.current.clientHeight;
         const refWidth = gridItemRef.current.clientWidth;
         const {columnWidth, rowHeight, gutter: rowGap} = gridContext;
