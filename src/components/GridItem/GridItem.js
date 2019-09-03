@@ -17,6 +17,7 @@ export const GridItem = (props) => {
         gridItemRef.current.style.height = `${desiredHeight}px`;
         gridItemRef.current.style.width = `${columnWidth}px`;
         gridItemRef.current.style.gridRowEnd = `span ${rowSpan}`;
+        console.log("loaded", {desiredHeight, columnWidth,rowSpan });
     }
 
     useEffect(itemLoaded, []);
