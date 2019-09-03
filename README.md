@@ -63,9 +63,9 @@ const images = [
 
 The `Grid` component takes the following props:
 
-`gutter`: The gap, in `px`,  between each row and each column of the grid
-`columnWidth`: The width, in `px`, of each individual column
-`rowHeight`: The height, in `px`, of each row.
+- `gutter`: The gap, in `px`,  between each row and each column of the grid
+- `columnWidth`: The width, in `px`, of each individual column
+- `rowHeight`: The height, in `px`, of each row.
 **Note**: Each `GridItem` may span multiple rows. `rowHeight` is the minimum height of one such row.
 
 The `GridItem` component takes no props but is needed to be used as it watches its children and recalculates it's height whenever the children load.
