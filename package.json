@@ -1,6 +1,6 @@
 {
   "name": "react-masonry-grid",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "a react component based masonry grid module",
   "main": "public/js/bundle.js",
   "scripts": {

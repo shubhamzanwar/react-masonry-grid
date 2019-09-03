@@ -6,7 +6,7 @@ This helpful little package allows you to easily render masonry(space-efficient)
 
 <sub>Have a look :D</sub>
 
-![masonry grid](docs/masonry.png)
+![masonry grid](https://raw.githubusercontent.com/shubhamzanwar/react-masonry-grid/master/docs/masonry.png)
 
 #### Demo:
 
