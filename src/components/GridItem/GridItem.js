@@ -24,7 +24,7 @@ export const GridItem = (props) => {
 
     return (
         <div ref={gridItemWrapper}>
-            <div ref={gridItemRef} onLoad={itemLoaded}>
+            <div ref={gridItemRef} onLoad={itemLoaded} style={{width: `${gridContext.columnWidth}px`}}>
                 {props.children}
             </div>
         </div>
