@@ -14,11 +14,9 @@ export const GridItem = (props) => {
         const desiredHeight = (columnWidth * refHeight) / refWidth;
         const rowSpan = Math.ceil((desiredHeight + rowGap) / (rowHeight + rowGap))
         
-        gridItemRef.style = {
-            height: `${desiredHeight}px`,
-            width: `${columnWidth}px`,
-            gridRowEnd: `span ${rowSpan}`
-        }
+        gridItemRef.current.style.height = `${desiredHeight}px`;
+        gridItemRef.current.style.width = `${columnWidth}px`;
+        gridItemRef.current.style.gridRowEnd = `span ${rowSpan}`;
     }
 
     useEffect(itemLoaded, []);
