@@ -23,8 +23,8 @@ export const GridItem = (props) => {
     useEffect(itemLoaded, []);
 
     return (
-        <div ref={gridItemWrapper}>
-            <div ref={gridItemRef} onLoad={itemLoaded} style={{width: `${gridContext.columnWidth}px`}}>
+        <div ref={gridItemWrapper} style={{width: `${gridContext.columnWidth}px`}}>
+            <div ref={gridItemRef} onLoad={itemLoaded}>
                 {props.children}
             </div>
         </div>
