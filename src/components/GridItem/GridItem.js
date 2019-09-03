@@ -6,22 +6,22 @@ export const GridItem = (props) => {
     const gridItemRef = useRef();
     const gridContext = useContext(GridContext);
 
-    useEffect(itemLoaded, []);
-
     const itemLoaded = () => {
         const refHeight = gridItemRef.current.clientHeight;
         const refWidth = gridItemRef.current.clientWidth;
         const {columnWidth, rowHeight, gutter: rowGap} = gridContext;
-
+        
         const desiredHeight = (columnWidth * refHeight) / refWidth;
         const rowSpan = Math.ceil((desiredHeight + rowGap) / (rowHeight + rowGap))
-
+        
         gridItemRef.current.style = {
             height: `${desiredHeight}px`,
             width: `${columnWidth}px`,
             gridRowEnd: `span ${rowSpan}`
         }
     }
+
+    useEffect(itemLoaded, []);
 
     return (
         <div 
