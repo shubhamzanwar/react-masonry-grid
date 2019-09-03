@@ -1,3 +1,2 @@
-import React from 'react';
-
-export const Boom = () => <div>boom</div>
+export {Grid} from './components/Grid/Grid';
+export {GridItem} from './components/GridItem/GridItem';
