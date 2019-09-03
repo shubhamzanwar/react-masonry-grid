@@ -4,7 +4,8 @@
   "description": "a react component based masonry grid module",
   "main": "public/js/bundle.js",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "demo:images": "webpack-dev-server --mode development --config webpack.demo.config.js --env=images --open 'Google Chrome'"
   },
   "keywords": [
     "react",
@@ -19,6 +20,7 @@
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.2.0",
+    "react-dom": "^16.9.0",
     "style-loader": "^1.0.0",
     "webpack": "^4.39.3",
     "webpack-cli": "^3.3.7",
