@@ -1,5 +1,7 @@
 # react masonry grid
 
+![downloads](https://img.shields.io/npm/dm/react-masonry-grid.svg) ![version](https://img.shields.io/npm/v/react-masonry-grid) ![size](https://img.shields.io/bundlephobia/min/react-masonry-grid)
+
 This helpful little package allows you to easily render masonry(space-efficient) grids using react.
 
 > **What** is a masonry grid?
