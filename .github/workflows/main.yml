@@ -12,23 +12,23 @@ jobs:
     - uses: actions/checkout@master
 
     - name: install dependencies
-    - uses: actions/npm@master
+      uses: actions/npm@master
       with:
         args: install
 
     - name: create build
-    - uses: actions/npm@master
+      uses: actions/npm@master
       with:
         args: run build
 
     - name: npm login
-    - uses: actions/npm@master
+      uses: actions/npm@master
       with:
         args: login
       env:
         NPM_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
     
     - name: npm publish
-    - uses: actions/npm@master
+      uses: actions/npm@master
       with:
         args: publish
