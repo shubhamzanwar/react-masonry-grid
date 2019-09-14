@@ -1,6 +1,6 @@
 # react masonry grid
 
-![downloads](https://img.shields.io/npm/dm/react-masonry-grid.svg) ![version](https://img.shields.io/npm/v/react-masonry-grid) ![size](https://img.shields.io/bundlephobia/min/react-masonry-grid)
+[![downloads](https://img.shields.io/npm/dm/react-masonry-grid.svg) ![version](https://img.shields.io/npm/v/react-masonry-grid) ![size](https://img.shields.io/bundlephobia/min/react-masonry-grid)](https://www.npmjs.com/package/react-masonry-grid)
 
 This helpful little package allows you to easily render masonry(space-efficient) grids using react.
 
@@ -32,7 +32,7 @@ npm run demo:text
 
 #### Installation
 
-This package is availanle as a npm module. To install it:
+This package is available as a npm module. To install it:
 
 ```shell
 npm install react-masonry-grid
@@ -55,7 +55,7 @@ const images = [
 <Grid gutter={10} columnWidth={200} rowHeight={10}>
     {images.map((image) => (
         <GridItem>
-            <img src={image} {{width: '100%' }}/>
+            <img src={image} style={{width: '100%' }}/>
         </GridItem>
     ))}
 </Grid>
